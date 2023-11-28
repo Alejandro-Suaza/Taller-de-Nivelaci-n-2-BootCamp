@@ -24,7 +24,7 @@ useRoutes: Permite definir las rutas.
 useNavegate: Sirve para cambiar entre diferentes rutas sin necesidad del componente Link.
 useParams: Acceder a los parámetros de la URL definidos en la ruta.
 useLocation: Accede a la información de la URL, como el search. 
-9.Se debe tener instalado el paquete de react-router-dom en el proyecto que deseas trabajar. Se pone el siguiente código en la consola (npm install react-router-dom). Usas el BrowserRouter para usarlo como el envoltorio de las rutas. Para la navegación de las paginas, usas el componente Link que funciona como el elemento (a), a diferencia que link evita que se recargue toda la página.
+9. Se debe tener instalado el paquete de react-router-dom en el proyecto que deseas trabajar. Se pone el siguiente código en la consola (npm install react-router-dom). Usas el BrowserRouter para usarlo como el envoltorio de las rutas. Para la navegación de las paginas, usas el componente Link que funciona como el elemento (a), a diferencia que link evita que se recargue toda la página.
 10. Para definir las rutas se utiliza el componente Route para definir la ruta específica y que componente renderizar, este dentro de Router que viene a ser la envoltura.
 Al componente route lo acompaña el atributo patch que es quien especifica la URL a la que la ruta responde, y el atributo component quien define el componente que se va a renderizar cuando la URL corresponda con la ruta. 
 11. Para crear un proyecto con Vite, se necesita tener vite instalado, usas el comando créate-vite react my-react-app (my-react-app es reemplazado con el nombre que deseas ponerle a tu proyect). Para iniciar el servidor de vite usamos npm run dev y así se visualizará lo que estés haciendo en tu navegador. 
