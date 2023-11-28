@@ -1,5 +1,5 @@
-import jsonServer from "json-server";
-import path from "path";
+import jsonServer from require("json-server");
+import path from require("path");
 
 const server = jsonServer.create();
 const router = jsonServer.router(path.join("db.json"));
