@@ -1,21 +1,11 @@
-import jsonServer from "json-server";
-import path from "path";
+const jsonServer = require("json-server"); 
 
 const server = jsonServer.create();
-const router = jsonServer.router(path.join("db.json"));
+const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 8080;
-
-server.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://alejandro-suaza.github.io");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+const port = process.env.PORT || 8080; 
 
 server.use(middlewares);
 server.use(router);
 
-server.listen(port, () => {
-  console.log(`Servidor JSON-Server en ejecución en el puerto ${port}`);
-});
+server.listen(port);
