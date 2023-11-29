@@ -1,9 +1,17 @@
 import jsonServer from "json-server";
+import path from "path";
 
 const server = jsonServer.create();
-const router = jsonServer.router("db.json");
+const router = jsonServer.router(path.join("db.json"));
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 8080;
+
+server.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://alejandro-suaza.github.io");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 
 server.use(middlewares);
 server.use(router);
